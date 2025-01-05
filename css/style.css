@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body > header {
+    border-radius: 12px;
+    box-shadow: 0px 0px 3px #000;
+    background-color: white;
+    align-self: center;
+    height: auto;
+    width: 97%;
+    margin: 1.5rem 2rem 1.5rem 2rem;
+    z-index: 10;
+    position: fixed;
+}
+
+body > main {
+    justify-self: center;
+    width: 100%;
+    height: auto;
+}
+
+body > footer {
+    width: 100%;
+    height: auto;
+}
+
+/* NAVBAR */
+body > header > nav {
+    display: flex;
+    border-radius: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+body > header > nav > h1 {
+    padding-left: 2rem;
+    color: black;
+}
+
+body > header > nav > h1 span {
+    color: green;
+}
+
+body > header > nav > ul {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body > header > nav > ul a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 450;
+}
+
+body > header > nav > ul a:hover {
+    color: green;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+body > main > .hero-section {
+    background-image: url(../img/Landscape\ Background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 720px;
+}
+
+body > main > .hero-section > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: rgba(0,0,0, 65%);
+}
+
+body > main > .hero-section > div h1 {
+    color: #fa2;
+    font-size: 3rem;
+}
+
+body > main > .hero-section > div p {
+    color: #fff;
+    text-align: center;
+}
+
+/* HIGHLIGHT SECTION */
+body > main > .highlight-section {
+    background-color: rgb(215, 215, 215);
+    height: 240px;
+}
+
+body > main > .highlight-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem 0 2rem;
+    text-align: center;
+}
+
+body > main > .highlight-section div article {
+    font-size: 1.2rem;
+}
+
+body > main > .highlight-section div article h2 {
+    font-size: 1.7rem;
+    font-weight: 650;
+    color: green;
+}
+
+body > main > .highlight-section div article p {
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+/* ENTERTAINMENT SECTION */
+body > main > .entertainment-section {
+    background-color: rgba(240, 240, 240, 0.667);
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body > main > .entertainment-section div h2 {
+    text-align: center;
+    margin-bottom: 4.5rem;
+    font-size: 3rem;
+}
+
+body > main > .entertainment-section div p span {
+    color: green;
+    font-weight: 650;
+}
+
+body > main > .entertainment-section div p {
+    text-align: center;
+    font-weight: 400;
+}
+
+/* ABOUT US SECTION */
+body > main > .about-us-section {
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 720px;
+}
+
+body > main > .about-us-section figure {
+    height: 100%;
+}
+
+body > main > .about-us-section figure img {
+    width: 42rem;
+    height: 100%;
+}
+
+body > main > .about-us-section > .description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 8rem 0 7rem;
+}
+
+body > main > .about-us-section > .description h2 {
+    color: #000;
+    font-size: 3rem;
+}
+
+body > main > .about-us-section > .description p {
+    color: #000;
+}
+
+body > main > .about-us-section > .description p span {
+    color: green;
+    font-weight: 650;
+}
+
+body > main > .about-us-section > .description ul {
+    display: flex;
+    flex-direction: row;
+    width: 8rem;
+    justify-content: space-between;
+}
+
+body > main > .about-us-section > .description a {
+    color: green;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+body > main > .about-us-section > .description a:hover {
+    color: #fa2;
+    font-weight: 750;
+}
+
+/* OUR SERVICES SECTION */
+body > main > .our-services-section {
+    background-color: #fff;
+    /* border: 2px solid #000; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > main > .our-services-section h2 {
+    /* border: 2px solid #fafa; */
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+body > main > .our-services-section div {
+    /* border: 2px solid #fafa; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+body > main > .our-services-section div article {
+    /* border: 2px solid #fafa; */
+    width: 50rem;
+    height: 25rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.2rem 0 3.2rem;
+}
+
+body > main > .our-services-section div article:hover {
+    box-shadow: 0px 0px 3px green;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+body > main > .our-services-section div article h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: green;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+body > main > .our-services-section div article p {
+    margin-bottom: 2rem;
+    font-weight: 470;
+}
+
+/* PROJECTS SECTION */
+body > main > .projects-section {
+    background-color: rgb(215, 215, 215);
+    height: 720px;
+}
+
+/* TESTIMONIAL SECTION */
+body > main > .testimonial-section {
+    background-color: #fff;
+    height: 720px;
+}
+
+/* GALLERY SECTION */
+body > main > .gallery-section {
+    background-color: rgb(215, 215, 215);
+    /* border: 2px solid #000; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body > main > .gallery-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+body > main > .gallery-section div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 2.4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+body > main > .gallery-section div article figure img {
+    width: 21rem;
+    height: auto;
+    border-radius: 12px;
+}
+
+body > main > .gallery-section div article figure img:hover {
+    box-shadow: 0px 0px 3px #000;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+} 
+
+/* CATALOG SECTION */
+body > main > .catalog-section {
+    background-color: #fff;
+    height: 720px;
+}
+
+/* CONTACT US SECTION */
+body > main > .contact-us-section {
+    background-color: rgb(215, 215, 215);
+    height: 720px;
+}
+
+body > main > .contact-us-section iframe {
+    width: 100%;
+    background-size: cover;
+    height: 30rem;
+}
+
+.contact-us-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-us form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us form label {
+    font-weight: bold;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-us form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-us aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us aside h3 {
+    margin-bottom: 1rem;
+}
+
+/* FOOTER */
+body > footer.hidden {
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > footer.hidden .aside {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+body > footer.hidden .aside h2 {
+    color: #000;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+body > footer.hidden .aside h2 span {
+    color: green;
+}
+
+body > footer.hidden .aside ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+body > footer.hidden .aside ul li, a {
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+    padding: 0 1rem 0 1rem;
+    font-weight: 400;
+}
+
+body > footer.hidden .aside ul li, a:hover {
+    color: green;
+    font-weight: 500;
+}
+
+body > footer.hidden hr {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 75%;
+    opacity: 0.4;
+}
+
+body > footer.hidden p {
+    margin-bottom: 4rem;
+}
