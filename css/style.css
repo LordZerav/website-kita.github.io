@@ -91,7 +91,7 @@ body > header > nav > ul a:hover {
 
 /* HERO SECTION */
 body > main > .hero-section {
-    background-image: url(website-kita.github.io/img/Landscape\ Background.jpg);
+    background-image: url(/website-kita.github.io/img/Landscape\ Background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
