@@ -31,7 +31,7 @@ body {
 
 body > header {
     border-radius: 12px;
-    box-shadow: 0px 0px 3px #000;
+    box-shadow: 0px 0px 2px #000;
     background-color: white;
     align-self: center;
     height: auto;
@@ -91,7 +91,7 @@ body > header > nav > ul a:hover {
 
 /* HERO SECTION */
 body > main > .hero-section {
-    background-image: url(/website-kita.github.io/img/Landscape\ Background.jpg);
+    background-image: url(../img/Landscape\ Background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -122,6 +122,7 @@ body > main > .hero-section > div p {
 /* HIGHLIGHT SECTION */
 body > main > .highlight-section {
     background-color: rgb(215, 215, 215);
+    cursor: pointer;
     height: 240px;
 }
 
@@ -182,6 +183,7 @@ body > main > .about-us-section {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 720px;
 }
 
@@ -297,15 +299,145 @@ body > main > .our-services-section div article p {
 }
 
 /* PROJECTS SECTION */
+
 body > main > .projects-section {
-    background-color: rgb(215, 215, 215);
-    height: 720px;
-}
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+body > main > .projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    color: #000;
+  }
+  
+body > main > .projects-section div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+body > main > .projects-section article {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+body > main > .projects-section article:hover {
+    transform: translateY(-10px);
+  }
+  
+body > main > .projects-section figure {
+    margin: 0;
+  }
+  
+body > main > .projects-section img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+body > main > .projects-section figcaption {
+    padding: 20px;
+    text-align: left;
+  }
+  
+body > main > .projects-section h4 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+body > main > .projects-section p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+body > main > .projects-section button {
+    display: inline-block;
+    background-color: #8bc34a;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+body > main > .projects-section button:hover {
+    background-color: #7cb342;
+  }
 
 /* TESTIMONIAL SECTION */
 body > main > .testimonial-section {
     background-color: #fff;
     height: 720px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+body > main > .testimonial-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+body > main > .testimonial-section > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 2rem;
+}
+
+body > main > .testimonial-section > div article {
+    box-shadow: 0px 0px 2px #000;
+    border-radius: 12px;
+    height: 12rem;
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+
+body > main > .testimonial-section > div article:hover {
+    box-shadow: 0px 0px 3px green;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+body > main > .testimonial-section > div article h3 {
+    color: green;
+    font-size: 1rem;
+    font-weight: 650;
+    margin: 1rem 1.7rem 0 1.7rem;
+}
+
+body > main > .testimonial-section > div article p {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 380;
+    margin: 0 1.7rem 1rem 1.7rem;
 }
 
 /* GALLERY SECTION */
@@ -348,78 +480,160 @@ body > main > .gallery-section div article figure img:hover {
     box-shadow: 0px 0px 3px #000;
     transform: scale(1.02);
     transition: transform 0.3s ease;
-} 
+}
+
+/* PREVIEW GALLERY SECTION */
+body > main > .preview {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+body > main > .preview > .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+body > main > .preview .prev, .preview .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    z-index: 1001;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+body > main > .preview .prev {
+    left: 20px;
+}
+
+body > main > .preview .next {
+    right: 20px;
+}
+
+body > main > .preview .prev:hover, .preview .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+body > main > .preview > .preview-content {
+    max-width: 80%;
+    max-height: 60%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+body > main > .preview > h3#previewTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+body > main > .preview > p#previewDescription {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
 
 /* CATALOG SECTION */
-body > main > .catalog-section {
+/* body > main > .catalog-section {
     background-color: #fff;
     height: 720px;
-}
+} */
 
 /* CONTACT US SECTION */
 body > main > .contact-us-section {
-    background-color: rgb(215, 215, 215);
+    background-color: #fff;
     height: 720px;
-}
-
-body > main > .contact-us-section iframe {
-    width: 100%;
-    background-size: cover;
-    height: 30rem;
-}
-
-.contact-us-section h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.contact-us {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.contact-us form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-us form label {
-    font-weight: bold;
-}
-
-.contact-us form input,
-.contact-us form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-us form button {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-us form button:hover {
-    background-color: #0056b3;
-}
-
-.contact-us aside {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-us aside h3 {
-    margin-bottom: 1rem;
+body > main > .contact-us-section h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+body > main > .contact-us-section .contact-us {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0 4rem 0 4rem;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+body > main > .contact-us-section .contact-us form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+body > main > .contact-us-section .contact-us form p {
+    font-weight: 420;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+body > main > .contact-us-section .contact-us aside {
+    width: 100%;
+}
+
+body > main > .contact-us-section .contact-us aside img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+body > main > .contact-us-section .contact-us form input, textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+
+body > main > .contact-us-section .contact-us form button {
+    padding: 1rem;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body > main > .contact-us-section .contact-us form button:hover {
+    background-color: #fa2;
 }
 
 /* FOOTER */
@@ -427,8 +641,8 @@ body > footer.hidden {
     height: auto;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -444,7 +658,7 @@ body > footer.hidden .aside {
 }
 
 body > footer.hidden .aside h2 {
-    color: #000;
+    color: #fff;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -463,7 +677,7 @@ body > footer.hidden .aside ul {
 
 body > footer.hidden .aside ul li, a {
     list-style: none;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     padding: 0 1rem 0 1rem;
     font-weight: 400;

@@ -47,3 +47,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hiddenElements.forEach(el => observer.observe(el));
 });
+
+const galleryData = [
+    {
+        src: "../img/Aglonema ijo.png",
+        title: "Aglonema Ijo",
+        description: "Tanaman hias berdaun hijau dengan corak yang menarik dan perawatan mudah."
+    },
+    {
+        src: "../img/Aglonema merah.png",
+        title: "Aglonema Merah",
+        description: "Tanaman hias dengan daun merah menyala yang memikat."
+    },
+    {
+        src: "../img/Anggrek Cymbidium.png",
+        title: "Anggrek Cymbidium",
+        description: "Anggrek cantik dengan bunga besar, cocok untuk dekorasi ruangan."
+    },
+];
+
+let currentIndex = 0;
+
+function openPreview(title, description, index = 0) {
+    const preview = document.getElementById("previewGallery");
+    const previewImage = document.getElementById("previewImage");
+    const previewTitle = document.getElementById("previewTitle");
+    const previewDescription = document.getElementById("previewDescription");
+
+    currentIndex = index;
+
+    previewImage.src = galleryData[currentIndex].src;
+    previewTitle.textContent = galleryData[currentIndex].title;
+    previewDescription.textContent = galleryData[currentIndex].description;
+
+    preview.style.display = "flex";
+}
+
+function closePreview() {
+    const preview = document.getElementById("previewGallery");
+    preview.style.display = "none";
+}
+
+function navigateImage(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = galleryData.length - 1;
+    } else if (currentIndex >= galleryData.length) {
+        currentIndex = 0;
+    }
+
+    openPreview(
+        galleryData[currentIndex].title,
+        galleryData[currentIndex].description,
+        currentIndex
+    );
+}
